@@ -1,11 +1,12 @@
 import { Tabs } from "expo-router";
 import { Image, Text, View } from "react-native";
+import { icons } from "../../constants";
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
     <View className="items-center justify-center gap-2">
       <Image
-        src={icon}
+        source={icon}
         resizeMode="contain"
         tintColor={color}
         className="w-6 h-6"
@@ -67,21 +68,6 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen
-          name="create"
-          options={{
-            title: "Create",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                icon={icons.plus}
-                color={color}
-                name="Create"
-                focused={focused}
-              />
-            ),
-          }}
-        />
-        <Tabs.Screen
           name="profile"
           options={{
             title: "Profile",
@@ -91,6 +77,21 @@ const TabsLayout = () => {
                 icon={icons.plus}
                 color={color}
                 name="Profile"
+                focused={focused}
+              />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="create"
+          options={{
+            title: "Create",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                icon={icons.profile}
+                color={color}
+                name="Create"
                 focused={focused}
               />
             ),
