@@ -1,6 +1,6 @@
 import { Tabs } from "expo-router";
 import { Image, Text, View } from "react-native";
-import { icons } from "../constants";
+import icons from "../../constants/icons";
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
@@ -89,7 +89,7 @@ const TabsLayout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={icons.Profile}
+                icon={icons.plus}
                 color={color}
                 name="Profile"
                 focused={focused}
