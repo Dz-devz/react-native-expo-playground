@@ -1,4 +1,4 @@
-import { Image, ScrollView, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../constants";
 export default function App() {
@@ -11,6 +11,23 @@ export default function App() {
             className="w-[130px] h-[84px]"
             resizeMode="contain"
           />
+          <Image
+            source={images.pen}
+            className="max-w-[80px] w-full h-[100px]"
+            resizeMode="contain"
+          />
+          <View className="relative mt-5">
+            <Text className="text-3xl text-white font-bold text-center">
+              Discover the art of a song and a story of the artist{" "}
+              <Text className="text-slate-200 font-pbold  underline">
+                DzPen
+              </Text>
+            </Text>
+            <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
+              Where a Developer and An Artist AKA DevArtisan Discover it's
+              passion creating beautiful Art thru Music and Web
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
