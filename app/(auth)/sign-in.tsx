@@ -3,6 +3,7 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {images} from "../../constants"
 import FormField from "../../components/FormField";
+import { Link } from "expo-router";
 
 import CustomButton from "../../components/CustomButton";
 
@@ -46,6 +47,13 @@ const SignIn = () => {
             isLoading={isSubmitting}
             textStyles
            />
+          
+          <View className="justify-center pt-5 flex-row gap-2">
+            <Text className="text-lg text-gray-100 font-pregular">
+              Don't have an account?
+            </Text>
+            <Link href="/sign-up" className="text-lg font-psemibold text-green-500">Sign Up</Link>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
