@@ -25,18 +25,18 @@ const SignIn = () => {
           <Text className="text-2xl text-white text-semibold font-psemibold mt-10" >Log In to DzPen Music</Text>
         
           <FormField 
-          title="Email"
-          value={form.email}
-          handleChangeText={(e) => setForm({...form, email: e}) }
-          otherStyles="mt-7"
-          keyboardType="email-address"
-          />
+            title="Email"
+            value={form.email}
+            handleChangeText={(e) => setForm({ ...form, email: e })}
+            otherStyles="mt-7"
+            keyboardType="email-address" 
+            placeholder={undefined}          />
           <FormField 
-          title="Password"
-          value={form.password}
-          handleChangeText={(e) => setForm({...form, password: e}) }
-          otherStyles="mt-7"
-          />
+            title="Password"
+            value={form.password}
+            handleChangeText={(e) => setForm({ ...form, password: e })}
+            otherStyles="mt-7" 
+            placeholder={undefined}          />
 
           <CustomButton
             title="Sign in"
